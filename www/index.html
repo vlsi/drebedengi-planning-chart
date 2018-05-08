@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>План расходов</title>
+    <link rel="stylesheet" href="css/dygraph.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div id="plan" style="width: 800px; height: 400px;"></div>
+<div id="credit" style="width: 800px; height: 200px;"></div>
+<div id="top_annotations"></div>
+<script language="JavaScript" src=""></script>
+<script language="JavaScript" src="js/data.js"></script>
+<!--<script language="JavaScript" src="js/transactions.js"></script>-->
+<script language="JavaScript" src="js/dygraph.js"></script>
+<script language="JavaScript" src="js/synchronizer.js"></script>
+<script language="JavaScript">
+    var ignore_outdated = [
+        'Работа в Неткрекер', 'Еда', 'Квартплата', 'Родителям-Хотьково'
+    ];
+</script>
+<script language="JavaScript" src="js/balance.js"></script>
+</body>
+</html>

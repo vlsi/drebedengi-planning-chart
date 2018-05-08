@@ -1,0 +1,27 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /chart/js/data.js
+  script: crawl_dd.app
+
+- url: /chart/js/(.+)
+  static_files: www/js/\1
+  upload: www/js/.+
+  expiration: "1m"
+  mime_type: text/javascript; charset=UTF-8
+
+- url: /chart/css/(.+)
+  static_files: www/css/\1
+  upload: www/css/.+
+  expiration: "1m"
+
+- url: /chart/
+  static_files: www/index.html
+  upload: www/index.html
+  expiration: "1m"
+
+libraries:
+- name: lxml
+  version: "2.3"
